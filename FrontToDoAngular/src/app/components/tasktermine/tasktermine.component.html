@@ -1,0 +1,37 @@
+
+<div class="list-group mb-3" >
+    <div href="#" class="list-group-item list-group-item-action flex-column align-items-start " *ngFor="let task of tasks">
+
+      <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{task.title}}</h5>
+      
+      
+      
+    </div>
+    <p class="mb-1">{{task.description}}</p>
+    <div class="d-flex w-100 justify-content-end">
+        
+    <button class="mx-1 btn btn-outline-danger" (click)="openConfirmationDialog(task)">
+    <i class="bi bi-trash"></i>Delete
+    </button>
+        
+        <div class=" form-check">
+            <button class="btn btn-outline-success" [disabled]="task.isTerminate"><i (click)="CheckIfTerminate(task)"  [class]="task.isTerminate?'bi bi-check':'bi bi-circle'"></i></button>
+            <input type="checkbox" class="fform-check-input visually-hidden" id="flexCheckChecked" [checked]="task.isTerminate"  >
+            <label class="form-check-label mx-1" for="flexCheckChecked">
+              Complete
+            </label>
+          </div>
+          
+        
+        
+      
+        
+      </div>
+      </div>
+     
+
+     
+ 
+  
+  

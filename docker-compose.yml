@@ -1,0 +1,19 @@
+version: '3'
+services:
+  front-app:
+       image: fronttodo
+       stdin_open: true
+       ports: 
+        - "4200:80"
+       networks:
+          - mean-app
+  back-app:
+         image: backnode
+         ports: 
+           - "7070:7070"
+         networks:
+          - mean-app
+
+networks:
+   mean-app:
+        driver: bridge

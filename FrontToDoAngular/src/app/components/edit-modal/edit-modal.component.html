@@ -1,0 +1,24 @@
+
+
+  <div class="modal-body">
+    <p>{{ confirmationMessage }}</p>
+    <form>
+    <div class="col-auto">
+        <label class="form-label">Title:</label>
+        <input class="form-control" [(ngModel)]="form.title" [ngModelOptions]="{standalone: true}" placeholder="Write the title ..." />
+      </div>
+  
+      <div class="col-auto">
+        <label class="form-label">Description:</label>
+        <input class="form-control" [(ngModel)]="form.description" [ngModelOptions]="{standalone: true}" placeholder="Write the Description ...." />
+      </div>
+    </form>
+  </div>
+ 
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="confirm()">Edit</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">Close</button>
+  </div>
+
+ 
+  
